@@ -4,6 +4,7 @@
   "description": "Tweets anytime ruqqus is down",
   "main": "index.js",
   "dependencies": {
+    "discord.js": "^12.2.0",
     "dotenv": "^8.2.0",
     "node-fetch": "^2.6.0",
     "twitter": "^1.7.1"
@@ -17,7 +18,11 @@
     "type": "git",
     "url": "git+https://github.com/danhab99/ruqqus-status-monitor.git"
   },
-  "keywords": ["ruqqus", "twitter", "status"],
+  "keywords": [
+    "ruqqus",
+    "twitter",
+    "status"
+  ],
   "author": "Dan Habot <dan.habot@gmail.com>",
   "license": "MIT",
   "bugs": {
