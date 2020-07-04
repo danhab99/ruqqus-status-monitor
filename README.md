@@ -5,8 +5,10 @@ Tweets anytime Ruqqus is down. [Ruqqus.com](https://ruqqus.com/) is checked hour
 ## Setup
 
 1. Get your twitter secrets from the twitter developer dashboard and put them in `./twitter-secrets.json`, go to [npm twitter](https://www.npmjs.com/package/twitter#for-user-based-authentication) to learn more.
-2. Run `docker-compose up` to boot service
-3. Leave it alone. Thing should beable to handle itself just fine
+2. Get your discord secret from the discord dev dashboard and put them in `./discord-secrets.json [token]`
+3. Set `guildID` and `channelID` in your discord secrets to the server and channel you want notifications to be sent on
+4. Run `docker-compose up -d --build` to boot service
+5. Leave it alone. Thing should beable to handle itself just fine
 
 ## Changing check interval
 
