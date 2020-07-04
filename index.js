@@ -20,29 +20,30 @@ const postTweet = status => {
     console.error('Tweet failed to post', err)
   })
 }
+const persistStatus = s => writeFileSync(LAST_STATUS_FILE, s)
 
 console.log(new Date().toString(), 'Doing check')
 
 fetch('https://ruqqus.com/')
   .then(res => {
     console.log('Response', res)
-    if (res.status >= 500) {
+    if (!res.ok) {
       console.log('Ruqqus is down')
 
       if (LAST_STATUS === 'up') {
-        postTweet('Ruqqus.com is down')
+        postTweet('@ruqqus Ruqqus.com is down')
       }
       else if (LAST_STATUS === 'down') {
-        postTweet('Ruqqus.com is still down')
+        postTweet('@ruqqus Ruqqus.com is still down')
       }
       
-      writeFileSync(LAST_STATUS_FILE, 'down')
+      persistStatus('down')
     }
     else {
       if (LAST_STATUS === 'down') {
-        postTweet('Ruqqus.com is back online')
+        postTweet('@ruqqus Ruqqus.com is back online')
       }
       console.log('Ruqqus is fine')
-      writeFileSync(LAST_STATUS_FILE, 'up')
+      persistStatus('up')
     }
   })
