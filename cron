@@ -1,1 +1,1 @@
-0 * * * * node /root/index.js
+0 * * * * node /root/index.js > /var/log/status.log

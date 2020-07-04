@@ -6,3 +6,5 @@ services:
     build:
       dockerfile: ./Dockerfile
       context: ./
+    volumes: 
+      - ${PWD}/log:/var/log
