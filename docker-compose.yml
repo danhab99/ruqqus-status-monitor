@@ -1,0 +1,8 @@
+version: "2"
+services:
+  ruqqus-monitor:
+    container_name: ruqqus-monitor
+    restart: always
+    build:
+      dockerfile: ./Dockerfile
+      context: ./
