@@ -1,0 +1,26 @@
+{
+  "name": "ruqqus-status-monitor",
+  "version": "1.0.0",
+  "description": "Tweets anytime ruqqus is down",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "node-fetch": "^2.6.0",
+    "twitter": "^1.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danhab99/ruqqus-status-monitor.git"
+  },
+  "keywords": ["ruqqus", "twitter", "status"],
+  "author": "Dan Habot <dan.habot@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danhab99/ruqqus-status-monitor/issues"
+  },
+  "homepage": "https://github.com/danhab99/ruqqus-status-monitor#readme"
+}
