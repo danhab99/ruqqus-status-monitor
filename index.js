@@ -8,7 +8,7 @@ if (!existsSync(LAST_STATUS_FILE)) {
   writeFileSync(LAST_STATUS_FILE, '', { flag: 'w+' })
 }
 
-const LAST_STATUS = readFileSync(LAST_STATUS_FILE)
+const LAST_STATUS = readFileSync(LAST_STATUS_FILE).toString()
 const client = new Twitter(require('./twitter-secrets.json'));
 const postTweet = status => {
   console.log('Tweeting', status)
