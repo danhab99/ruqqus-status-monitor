@@ -21,7 +21,7 @@ const postTweet = status => {
   })
 }
 
-console.log('Doing check')
+console.log(new Date().toString(), 'Doing check')
 
 fetch('https://ruqqus.com/')
   .then(res => {
