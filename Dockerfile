@@ -18,4 +18,6 @@ RUN npm install
 
 ADD . .
 
+RUN npm test
+
 CMD cron && tail -f /var/log/cron.log
