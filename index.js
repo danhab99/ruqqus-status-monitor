@@ -21,6 +21,7 @@ const postTweet = status => {
   })
 }
 const persistStatus = s => writeFileSync(LAST_STATUS_FILE, s)
+const time = () => (new Date()).toLocaleString()
 
 console.log(new Date().toString(), 'Doing check')
 
@@ -30,10 +31,11 @@ fetch('https://ruqqus.com/')
       console.log('Ruqqus is down')
 
       if (LAST_STATUS === 'up') {
-        postTweet('@ruqqus Ruqqus.com is down')
+        // postTweet('@ruqqus Ruqqus.com is down')
+        postTweet(`@ruqqus I just checked at ${time()}. Ruqqus.com went down.`)
       }
       else if (LAST_STATUS === 'down') {
-        postTweet('@ruqqus Ruqqus.com is still down')
+        postTweet(`@ruqqus Captains log "${time()}"; Ruqqus.com is still down`)
       }
       
       persistStatus('down')

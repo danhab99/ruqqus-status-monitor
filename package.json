@@ -17,7 +17,11 @@
     "type": "git",
     "url": "git+https://github.com/danhab99/ruqqus-status-monitor.git"
   },
-  "keywords": ["ruqqus", "twitter", "status"],
+  "keywords": [
+    "ruqqus",
+    "twitter",
+    "status"
+  ],
   "author": "Dan Habot <dan.habot@gmail.com>",
   "license": "MIT",
   "bugs": {
