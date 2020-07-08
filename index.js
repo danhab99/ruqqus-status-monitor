@@ -26,7 +26,6 @@ console.log(new Date().toString(), 'Doing check')
 
 fetch('https://ruqqus.com/')
   .then(res => {
-    console.log('Response', res)
     if (!res.ok) {
       console.log('Ruqqus is down')
 
