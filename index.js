@@ -21,7 +21,7 @@ const postTweet = status => {
   })
 }
 const persistStatus = s => writeFileSync(LAST_STATUS_FILE, s)
-const time = () => (new Date()).toLocaleString()
+const time = () => (new Date()).toString()
 
 console.log(new Date().toString(), 'Doing check')
 
