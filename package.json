@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "twitter": "^1.7.1"
   },
   "devDependencies": {},
